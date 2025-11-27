@@ -1,0 +1,208 @@
+/* ====== TOKO WARNA & GLOBAL VARS ====== */
+
+:root {
+    --potato-bg: #f7e0c4;
+    --potato-brown: #7b3a26; /* sesuaikan kalau mau persis warna logo */
+  
+    /* lebar shared antara logo & loader bar */
+    --loader-width: min(420px, 60vw);
+  }
+  
+  /* ====== BASE LAYOUT ====== */
+  
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  
+  .site-body {
+    min-height: 100vh;
+    background-color: var(--potato-bg);
+  }
+  
+  .site-main {
+    min-height: 100vh;
+  }
+  
+  /* sebelum loaded, hanya hero-screen yang disembunyikan */
+  body:not(.is-loaded) #hero-screen {
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  body.is-loaded #hero-screen {
+    opacity: 1;
+    transition: opacity 0.7s ease;
+  }
+  
+  /* ====== LOADER ====== */
+  
+  .loader {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    overflow: hidden;
+  
+    background-color: var(--potato-bg);
+    background-image: url("../images/background.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .loader__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.04);
+    mix-blend-mode: multiply;
+  }
+  
+  /* WRAPPER LOGO (hanya untuk kontrol lebar & overflow) */
+  .loader__logo-wrap {
+    position: relative;
+    z-index: 1;
+    width: var(--loader-width);
+    max-width: 520px;
+    overflow: hidden;
+  }
+  
+  /* LOGO: simple fade + naik dikit, tanpa overlay kotak */
+  .loader__logo {
+    display: block;
+    width: 100%;
+    opacity: 0;
+    transform: translateY(8px);
+    filter: blur(2px);
+    animation: logo-fade-rise 0.8s ease-out forwards;
+  }
+  
+  @keyframes logo-fade-rise {
+    0% {
+      opacity: 0;
+      transform: translateY(8px);
+      filter: blur(2px);
+    }
+    40% {
+      opacity: 1;
+      transform: translateY(-3px);
+      filter: blur(0);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+      filter: blur(0);
+    }
+  }
+  
+  /* LOADING BAR */
+  
+  .loader__bar {
+    position: relative;
+    z-index: 1;
+    width: var(--loader-width);
+    height: 4px;
+    border-radius: 999px;
+    background-color: rgba(123, 58, 38, 0.18); /* cokelat muda transparan */
+    overflow: hidden;
+  }
+  
+  .loader__bar-fill {
+    width: 0%;
+    height: 100%;
+    border-radius: inherit;
+    background-color: var(--potato-brown);
+    transform-origin: left center;
+  
+    /* durasi 3.5s, sama dengan LOADER_DURATION di JS */
+    animation: loader-bar-fill 3.5s ease-out forwards;
+  }
+  
+  @keyframes loader-bar-fill {
+    0% {
+      width: 0%;
+    }
+    12% {
+      width: 22%;
+    }
+    40% {
+      width: 55%;
+    }
+    75% {
+      width: 85%;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+  
+  .loader--hide {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.7s ease;
+  }
+  
+  /* ====== HERO TRIPTYCH (3 FOTO CARD) ====== */
+  
+  .hero-triptych {
+    min-height: 100vh;
+    display: flex;
+    gap: 2rem;
+    padding: 3rem 7vw;
+    background-color: var(--potato-bg);
+  }
+  
+  .hero-triptych__col {
+    flex: 1;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.21);
+  }
+  
+  .hero-triptych__col--center {
+    flex: 1.25;
+  }
+  
+  .hero-triptych__image {
+    width: 100%;
+    height: 100%;
+    min-height: 60vh;
+    object-fit: cover;
+    transform: scale(1.03);
+    transition: transform 0.7s ease-out;
+  }
+  
+  .hero-triptych__col:hover .hero-triptych__image {
+    transform: scale(1.07);
+  }
+  
+  /* responsive */
+  
+  @media (max-width: 900px) {
+    .hero-triptych {
+      flex-direction: column;
+      padding: 2rem 1.5rem;
+    }
+  
+    .hero-triptych__image {
+      min-height: 40vh;
+    }
+  }
+  /* ===== TRANSISI DETAIL BRAND ===== */
+#detailView {
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 260ms cubic-bezier(0.22, 0.61, 0.36, 1),
+                transform 260ms cubic-bezier(0.22, 0.61, 0.36, 1);
+  }
+  
+  #detailView.detail-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
