@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern FAQ Section</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+  <!-- FAQs SECTION -->
+  <section class="py-16 md:py-20">
+    <div class="mx-auto max-w-4xl px-4 lg:px-0">
+      <!-- Header -->
+      <div class="text-center mb-12">
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          Frequently Asked Questions
+        </h2>
+        <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+          Here's a little help section — and if you need more, we're only one click away.
+        </p>
+      </div>
+      
+      <!-- FAQ Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <!-- FAQ Item 1 -->
+        <div class="faq-item border-2 border-[#b9846a] rounded-2xl p-6 bg-gradient-to-br from-[#fce3d3] to-[#fad4bf] cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:shadow-xl" onclick="toggleFaq(this)">
+          <div class="flex justify-between items-start">
+            <h3 class="font-bold text-lg pr-4 text-gray-900">Do I need a reservation?</h3>
+            <div class="faq-icon flex-shrink-0 w-6 h-6 rounded-full bg-white/50 flex items-center justify-center text-[#b9846a] font-bold transition-transform duration-300">
+              +
+            </div>
+          </div>
+          <div class="faq-content max-h-0 overflow-hidden transition-all duration-400">
+            <p class="text-sm text-gray-700 leading-relaxed pt-3">
+              For the restaurant and bar, we recommend it — we get pretty popular around meal times! The bakery (when it's up) is drop-by friendly.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 2 -->
+        <div class="faq-item border-2 border-[#b9846a] rounded-2xl p-6 bg-gradient-to-br from-[#c5c9e3] to-[#b0b5d8] cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:shadow-xl" onclick="toggleFaq(this)">
+          <div class="flex justify-between items-start">
+            <h3 class="font-bold text-lg pr-4 text-gray-900">Can I visit all three in one day?</h3>
+            <div class="faq-icon flex-shrink-0 w-6 h-6 rounded-full bg-white/50 flex items-center justify-center text-[#b9846a] font-bold transition-transform duration-300">
+              +
+            </div>
+          </div>
+          <div class="faq-content max-h-0 overflow-hidden transition-all duration-400">
+            <p class="text-sm text-gray-700 leading-relaxed pt-3">
+              Absolutely! Many guests love experiencing our restaurant for lunch, enjoying drinks at the bar in the evening, and grabbing fresh pastries from the bakery. It's the perfect day out!
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 3 -->
+        <div class="faq-item border-2 border-[#b9846a] rounded-2xl p-6 bg-gradient-to-br from-[#d4d4a0] to-[#c5c58f] cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:shadow-xl" onclick="toggleFaq(this)">
+          <div class="flex justify-between items-start">
+            <h3 class="font-bold text-lg pr-4 text-gray-900">Do you offer takeaway or delivery?</h3>
+            <div class="faq-icon flex-shrink-0 w-6 h-6 rounded-full bg-white/50 flex items-center justify-center text-[#b9846a] font-bold transition-transform duration-300">
+              +
+            </div>
+          </div>
+          <div class="faq-content max-h-0 overflow-hidden transition-all duration-400">
+            <p class="text-sm text-gray-700 leading-relaxed pt-3">
+              Yes! We offer takeaway from all locations. Delivery is available through major food delivery platforms. Check our website for current delivery partners and hours.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 4 -->
+        <div class="faq-item border-2 border-[#b9846a] rounded-2xl p-6 bg-gradient-to-br from-[#d4a8a0] to-[#c9968e] cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:shadow-xl" onclick="toggleFaq(this)">
+          <div class="flex justify-between items-start">
+            <h3 class="font-bold text-lg pr-4 text-gray-900">Are you family-friendly?</h3>
+            <div class="faq-icon flex-shrink-0 w-6 h-6 rounded-full bg-white/50 flex items-center justify-center text-[#b9846a] font-bold transition-transform duration-300">
+              +
+            </div>
+          </div>
+          <div class="faq-content max-h-0 overflow-hidden transition-all duration-400">
+            <p class="text-sm text-gray-700 leading-relaxed pt-3">
+              We welcome families with open arms! We have kids' menus, high chairs, and a relaxed atmosphere. The bakery is especially popular with little ones.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="text-center mt-12">
+        <p class="text-gray-600 mb-4">Still have questions?</p>
+        <button class="bg-[#b9846a] hover:bg-[#a67559] text-white font-semibold px-8 py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+          Contact Us
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function toggleFaq(element) {
+      const content = element.querySelector('.faq-content');
+      const icon = element.querySelector('.faq-icon');
+      
+      // Check if this FAQ is currently open
+      const isOpen = content.classList.contains('max-h-96');
+      
+      // Close all FAQs
+      document.querySelectorAll('.faq-content').forEach(item => {
+        item.classList.remove('max-h-96');
+        item.classList.add('max-h-0');
+      });
+      
+      document.querySelectorAll('.faq-icon').forEach(item => {
+        item.classList.remove('rotate-45');
+      });
+      
+      // If this FAQ wasn't open, open it
+      if (!isOpen) {
+        content.classList.remove('max-h-0');
+        content.classList.add('max-h-96');
+        icon.classList.add('rotate-45');
+      }
+    }
+  </script>
+</body>
+</html>

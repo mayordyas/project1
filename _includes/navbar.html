@@ -1,0 +1,48 @@
+  <!-- TOP NAV -->
+  <header class="absolute top-0 left-0 right-0 z-10 bg-white">
+    <div class="mx-auto max-w-6xl px-4 lg:px-0 py-4 flex items-center justify-between">
+      {% if page.url contains 'alani' %}
+        <img src="{{ '/assets/images/alani.svg' | relative_url }}" alt="Alani" class="h-8" />
+      {% elsif page.url contains 'proud-potato-peeler' %}
+        <img src="{{ '/assets/images/logo-proud-potato.svg' | relative_url }}" alt="Proud Potato" class="h-8" />
+      {% else %}
+        <img src="{{ '/assets/images/alani.svg' | relative_url }}" alt="Alani" class="h-8" />
+      {% endif %}
+      <button id="menu-toggle" class="flex flex-col gap-1.5">
+        <span class="block h-[2px] w-6 rounded-full bg-[#b9846a]"></span>
+        <span class="block h-[2px] w-5 rounded-full bg-[#b9846a]"></span>
+        <span class="block h-[2px] w-4 rounded-full bg-[#b9846a]"></span>
+      </button>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="overflow-hidden bg-white border-t border-gray-200 transition-all duration-300 ease-in-out max-h-0 opacity-0">
+      <div class="mx-auto max-w-6xl px-4 py-6">
+        <nav class="space-y-4">
+          <a href="#about" class="block text-lg text-gray-800 hover:text-[#b9846a] transition-colors duration-200">About</a>
+          <a href="#faqs" class="block text-lg text-gray-800 hover:text-[#b9846a] transition-colors duration-200">FAQs</a>
+          <a href="#bakery" class="block text-lg text-gray-800 hover:text-[#b9846a] transition-colors duration-200">Bakery</a>
+          <a href="#menu" class="block text-lg text-gray-800 hover:text-[#b9846a] transition-colors duration-200">Menu</a>
+          <a href="#reviews" class="block text-lg text-gray-800 hover:text-[#b9846a] transition-colors duration-200">Reviews</a>
+          <a href="#instagram" class="block text-lg text-gray-800 hover:text-[#b9846a] transition-colors duration-200">Instagram</a>
+        </nav>
+        <div class="mt-6 space-y-3">
+          <button class="w-full bg-[#b9846a] text-white py-3 px-6 rounded-lg font-medium hover:bg-[#a67659] transition-colors duration-200">Order Online</button>
+          <button class="w-full border border-[#b9846a] text-[#b9846a] py-3 px-6 rounded-lg font-medium hover:bg-[#b9846a] hover:text-white transition-all duration-200">Make Reservation</button>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <script>
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+      const menu = document.getElementById('mobile-menu');
+      if (menu.style.maxHeight === '500px') {
+        menu.style.maxHeight = '0';
+        menu.style.opacity = '0';
+      } else {
+        menu.style.maxHeight = '500px';
+        menu.style.opacity = '1';
+      }
+    });
+  </script>
