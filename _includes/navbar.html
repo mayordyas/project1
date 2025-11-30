@@ -15,10 +15,11 @@
       </button>
     </div>
     
-    <!-- Fullscreen Menu -->
-    <div id="mobile-menu" class="fixed inset-0 bg-[#f5e6d3] z-[9999] hidden transform -translate-y-full transition-transform duration-300">
-      <div class="h-full overflow-y-auto">
-        <div class="max-w-md mx-auto px-8 py-8">
+    <!-- Drawer Menu -->
+    <div id="mobile-menu" class="fixed inset-0 z-[9999] hidden">
+      <div class="absolute inset-0 bg-black bg-opacity-50" id="menu-overlay"></div>
+      <div class="absolute top-0 right-0 h-full w-80 transform translate-x-full transition-transform duration-300 overflow-y-auto" style="background-image: url('assets/images/background.png'); background-size: cover; background-position: center;">
+        <div class="px-8 py-8">
           <div class="flex justify-end mb-8">
             <button id="menu-close" class="text-gray-800 hover:text-[#b9846a]">
               <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -27,61 +28,55 @@
             </button>
           </div>
           
-          <div class="mb-8">
-            {% if page.url contains 'alani' %}
-              <h2 class="text-2xl font-bold text-gray-800 mb-1">Alani</h2>
-            {% elsif page.url contains 'proud-potato-peeler' %}
-              <h2 class="text-2xl font-bold text-gray-800 mb-1">Proud Potato Peeler</h2>
-            {% else %}
-              <h2 class="text-2xl font-bold text-gray-800 mb-1">Menu</h2>
-            {% endif %}
-          </div>
-          
-          <nav class="space-y-4 mb-8">
-            <a href="#about" class="block text-base text-gray-800 hover:text-[#b9846a]">About</a>
-            <a href="#faqs" class="block text-base text-gray-800 hover:text-[#b9846a]">FAQs</a>
-            <a href="#bakery" class="block text-base text-gray-800 hover:text-[#b9846a]">Bakery</a>
-            <a href="#menu" class="block text-base text-gray-800 hover:text-[#b9846a]">Menu</a>
-            <a href="#reviews" class="block text-base text-gray-800 hover:text-[#b9846a]">Reviews</a>
-            <a href="#instagram" class="block text-base text-gray-800 hover:text-[#b9846a]">Instagram</a>
-          </nav>
-          
-          <div class="space-y-3 mb-12">
-            <button class="w-full border-2 border-orange-500 text-gray-800 py-3 px-6 rounded-full font-semibold hover:bg-orange-500 hover:text-white transition-all">Order Online</button>
-            <button class="w-full border-2 border-blue-500 text-gray-800 py-3 px-6 rounded-full font-semibold hover:bg-blue-500 hover:text-white transition-all">Make Reservation</button>
-          </div>
-          
-          {% if page.url contains 'alani' %}
-          <div class="space-y-4 mb-12">
-            <a href="proud-potato-peeler.html" class="flex items-center justify-between text-gray-800 text-xl font-bold hover:text-[#b9846a]">
-              <span>Proud Potato Peeler</span>
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-              </svg>
-            </a>
-            <a href="proud-perfect-potions.html" class="flex items-center justify-between text-gray-800 text-xl font-bold hover:text-[#b9846a]">
-              <span>Proud Perfect Potions</span>
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-              </svg>
-            </a>
-          </div>
-          {% elsif page.url contains 'proud-potato-peeler' %}
-          <div class="space-y-4 mb-12">
-            <a href="alani.html" class="flex items-center justify-between text-gray-800 text-xl font-bold hover:text-[#b9846a]">
+          <div class="space-y-4 mb-12 mt-16">
+            <button id="alani-toggle" class="w-full flex items-center justify-between text-gray-800 text-xl font-bold hover:text-[#b9846a]">
               <span>Alani</span>
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              <svg class="w-6 h-6 transform transition-transform" id="alani-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
               </svg>
-            </a>
-            <a href="proud-perfect-potions.html" class="flex items-center justify-between text-gray-800 text-xl font-bold hover:text-[#b9846a]">
+            </button>
+            <div id="alani-dropdown" class="hidden pl-4 space-y-3">
+              <a href="alani.html#about" class="block text-base text-gray-800 hover:text-[#b9846a]">About</a>
+              <a href="alani.html#faqs" class="block text-base text-gray-800 hover:text-[#b9846a]">FAQs</a>
+              <a href="alani.html#bakery" class="block text-base text-gray-800 hover:text-[#b9846a]">Bakery</a>
+              <a href="alani.html#menu" class="block text-base text-gray-800 hover:text-[#b9846a]">Menu</a>
+              <a href="alani.html#reviews" class="block text-base text-gray-800 hover:text-[#b9846a]">Reviews</a>
+              <a href="alani.html#instagram" class="block text-base text-gray-800 hover:text-[#b9846a]">Instagram</a>
+              <div class="space-y-2 pt-2">
+                <button class="w-full border-2 border-[#BA3914] bg-transparent text-gray-800 py-2 px-4 text-sm font-semibold hover:bg-[#BA3914] hover:text-white transition-all" style="border-radius: 16px;">Order Online</button>
+                <button class="w-full border-2 border-[#496BBB] bg-transparent text-gray-800 py-2 px-4 text-sm font-semibold hover:bg-[#496BBB] hover:text-white transition-all" style="border-radius: 16px;">Make Reservation</button>
+              </div>
+            </div>
+            
+            <button id="potato-toggle" class="w-full flex items-center justify-between text-gray-800 text-xl font-bold hover:text-[#b9846a]">
+              <span>Proud Potato Peeler</span>
+              <svg class="w-6 h-6 transform transition-transform" id="potato-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div id="potato-dropdown" class="hidden pl-4 space-y-3">
+              <a href="proud-potato-peeler.html#about" class="block text-base text-gray-800 hover:text-[#b9846a]">About</a>
+              <a href="proud-potato-peeler.html#faqs" class="block text-base text-gray-800 hover:text-[#b9846a]">FAQs</a>
+              <a href="proud-potato-peeler.html#bakery" class="block text-base text-gray-800 hover:text-[#b9846a]">Bakery</a>
+              <a href="proud-potato-peeler.html#menu" class="block text-base text-gray-800 hover:text-[#b9846a]">Menu</a>
+              <a href="proud-potato-peeler.html#reviews" class="block text-base text-gray-800 hover:text-[#b9846a]">Reviews</a>
+              <a href="proud-potato-peeler.html#instagram" class="block text-base text-gray-800 hover:text-[#b9846a]">Instagram</a>
+              <div class="space-y-2 pt-2">
+                <button class="w-full border-2 border-[#BA3914] bg-transparent text-gray-800 py-2 px-4 text-sm font-semibold hover:bg-[#BA3914] hover:text-white transition-all" style="border-radius: 16px;">Order Online</button>
+                <button class="w-full border-2 border-[#496BBB] bg-transparent text-gray-800 py-2 px-4 text-sm font-semibold hover:bg-[#496BBB] hover:text-white transition-all" style="border-radius: 16px;">Make Reservation</button>
+              </div>
+            </div>
+            
+            <button id="potions-toggle" class="w-full flex items-center justify-between text-gray-800 text-xl font-bold hover:text-[#b9846a]">
               <span>Proud Perfect Potions</span>
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              <svg class="w-6 h-6 transform transition-transform" id="potions-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
               </svg>
-            </a>
+            </button>
+            <div id="potions-dropdown" class="hidden pl-4 space-y-3">
+              <a href="proud-perfect-potions.html" class="block text-base text-gray-800 hover:text-[#b9846a]">Coming Soon</a>
+            </div>
           </div>
-          {% endif %}
           
           <div class="flex justify-around">
             <a href="career.html" class="text-gray-800 text-xl font-bold hover:text-[#b9846a]">Career</a>
@@ -96,16 +91,67 @@
     const menuToggle = document.getElementById('menu-toggle');
     const menuClose = document.getElementById('menu-close');
     const menu = document.getElementById('mobile-menu');
+    const menuOverlay = document.getElementById('menu-overlay');
+    const drawer = menu.querySelector('.transform');
     
-    menuToggle.addEventListener('click', function() {
+    function openMenu() {
       menu.classList.remove('hidden');
       document.body.style.overflow = 'hidden';
-      setTimeout(() => menu.classList.remove('-translate-y-full'), 10);
-    });
+      setTimeout(() => drawer.classList.remove('translate-x-full'), 10);
+    }
     
-    menuClose.addEventListener('click', function() {
-      menu.classList.add('-translate-y-full');
+    function closeMenu() {
+      drawer.classList.add('translate-x-full');
       document.body.style.overflow = '';
       setTimeout(() => menu.classList.add('hidden'), 300);
+    }
+    
+    menuToggle.addEventListener('click', openMenu);
+    menuClose.addEventListener('click', closeMenu);
+    menuOverlay.addEventListener('click', closeMenu);
+    
+    // Dropdown toggles
+    const alaniToggle = document.getElementById('alani-toggle');
+    const alaniDropdown = document.getElementById('alani-dropdown');
+    const alaniArrow = document.getElementById('alani-arrow');
+    const potatoToggle = document.getElementById('potato-toggle');
+    const potatoDropdown = document.getElementById('potato-dropdown');
+    const potatoArrow = document.getElementById('potato-arrow');
+    
+    alaniToggle.addEventListener('click', function() {
+      alaniDropdown.classList.toggle('hidden');
+      alaniArrow.classList.toggle('rotate-180');
+      if (!alaniDropdown.classList.contains('hidden')) {
+        potatoDropdown.classList.add('hidden');
+        potatoArrow.classList.remove('rotate-180');
+        potionsDropdown.classList.add('hidden');
+        potionsArrow.classList.remove('rotate-180');
+      }
+    });
+    
+    potatoToggle.addEventListener('click', function() {
+      potatoDropdown.classList.toggle('hidden');
+      potatoArrow.classList.toggle('rotate-180');
+      if (!potatoDropdown.classList.contains('hidden')) {
+        alaniDropdown.classList.add('hidden');
+        alaniArrow.classList.remove('rotate-180');
+        potionsDropdown.classList.add('hidden');
+        potionsArrow.classList.remove('rotate-180');
+      }
+    });
+    
+    const potionsToggle = document.getElementById('potions-toggle');
+    const potionsDropdown = document.getElementById('potions-dropdown');
+    const potionsArrow = document.getElementById('potions-arrow');
+    
+    potionsToggle.addEventListener('click', function() {
+      potionsDropdown.classList.toggle('hidden');
+      potionsArrow.classList.toggle('rotate-180');
+      if (!potionsDropdown.classList.contains('hidden')) {
+        alaniDropdown.classList.add('hidden');
+        alaniArrow.classList.remove('rotate-180');
+        potatoDropdown.classList.add('hidden');
+        potatoArrow.classList.remove('rotate-180');
+      }
     });
   </script>

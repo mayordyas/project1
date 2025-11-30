@@ -1,164 +1,21 @@
 ---
-layout: default
 title: Career
 ---
-
-<script src="https://cdn.tailwindcss.com"></script>
-<div class="min-h-screen bg-orange-100 text-slate-900">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Career - The Potato Heroes</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+<div style="background-color: #fbf9ed;">
 {% include navbar.html %}
-
-<!-- Hero Section -->
-<section class="relative h-screen flex items-center justify-center">
-  <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('{{ '/assets/images/2KY_1729.jpg' | relative_url }}');">
-    <div class="absolute inset-0 bg-black bg-opacity-40"></div>
-  </div>
-  <div class="relative z-0 text-center text-white">
-    <h1 class="text-6xl md:text-8xl font-bold tracking-wider">JOIN THE TEAM</h1>
-  </div>
-</section>
-
-<!-- Career Content Section -->
-<section class="py-20 px-6 md:px-12 lg:px-20">
-  <div class="max-w-6xl mx-auto">
-    <div class="grid md:grid-cols-2 gap-12 items-center">
-      <!-- Left Column -->
-      <div>
-        <h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-8 leading-tight">
-          At The Proud Potato Heroes, we don't just make food — we make people happy.
-        </h2>
-      </div>
-      
-      <!-- Right Column -->
-      <div class="relative">
-        <!-- Vertical Line -->
-        <div class="absolute left-0 top-0 w-1 h-full bg-orange-400"></div>
-        <div class="pl-8 space-y-6">
-          <p class="text-lg text-slate-700 leading-relaxed">
-            From flaky croissants to bold cocktails and shared feasts around the table, everything we create comes from passion, creativity, and a love for good company.
-          </p>
-          <p class="text-lg text-slate-700 leading-relaxed">
-            We're always looking for curious, kind, and food-loving humans to join our growing team across our three brands — Alani (bakery), Proud Potato Peeler (restaurant), and Proud Perfect Potions (bar).
-          </p>
-          <p class="text-lg text-slate-700 leading-relaxed">
-            If you believe in great food, good vibes, and teamwork that feels like family, we'd love to hear from you.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Current Openings Section -->
-<section class="py-20 px-6 md:px-12 lg:px-20">
-  <div class="max-w-4xl mx-auto">
-    <h2 class="text-4xl md:text-5xl font-bold text-center text-slate-900 mb-16">Current Openings</h2>
-    
-    <div class="space-y-6">
-      <!-- Chef de Partie -->
-      <div class="bg-white rounded-3xl border-4 border-amber-800 p-8">
-        <div class="flex justify-between items-start mb-4">
-          <h3 class="text-2xl font-bold text-slate-900">Chef de Partie</h3>
-          <div class="text-right">
-            <p class="text-xl font-bold text-slate-900">Proud Potato Peeler</p>
-            <button class="text-amber-800 hover:text-amber-600 mt-2">
-              <span class="text-sm">Less</span>
-              <svg class="w-4 h-4 inline ml-1 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-              </svg>
-            </button>
-          </div>
-        </div>
-        <div class="w-full h-1 bg-amber-800 mb-6"></div>
-        <div class="text-slate-700">
-          <p class="mb-4">Help bring Chef Alberto's bold, globally inspired dishes to life. You'll work closely with our kitchen team, creating high-quality plates that combine creativity, precision, and love for ingredients.</p>
-          <p><strong>Requirements:</strong> 2-3 years of kitchen experience, strong work ethic, and a great sense of humor.</p>
-          <p><strong>Location:</strong> Singapore</p>
-        </div>
-      </div>
-      
-      <!-- Baker -->
-      <div class="bg-white rounded-3xl border-4 border-amber-800 p-8">
-        <div class="flex justify-between items-start mb-4">
-          <h3 class="text-2xl font-bold text-slate-900">Baker</h3>
-          <div class="text-right">
-            <p class="text-xl font-bold text-slate-900">Alani</p>
-            <button class="text-amber-800 hover:text-amber-600 mt-2">
-              <span class="text-sm">Find out more</span>
-              <svg class="w-4 h-4 inline ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-              </svg>
-            </button>
-          </div>
-        </div>
-        <div class="w-full h-1 bg-amber-800 mb-6"></div>
-        <p class="text-slate-700">Rise early, bake daily, and spread happiness with every loaf and pastry. Join our bakery team and work with our signature sourdough starter "Mary" — the heart of Alani.</p>
-      </div>
-      
-      <!-- Bartender -->
-      <div class="bg-white rounded-3xl border-4 border-amber-800 p-8">
-        <div class="flex justify-between items-start mb-4">
-          <h3 class="text-2xl font-bold text-slate-900">Bartender</h3>
-          <div class="text-right">
-            <p class="text-xl font-bold text-slate-900">Proud Perfect Potions</p>
-            <button class="text-amber-800 hover:text-amber-600 mt-2">
-              <span class="text-sm">Find out more</span>
-              <svg class="w-4 h-4 inline ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-              </svg>
-            </button>
-          </div>
-        </div>
-        <div class="w-full h-1 bg-amber-800 mb-6"></div>
-        <p class="text-slate-700">We're looking for someone who can shake, stir, and charm! From Aperol Mimosas to creative house cocktails, you'll craft drinks that bring the bar's playful spirit to life.</p>
-      </div>
-      
-      <!-- Service Crew -->
-      <div class="bg-white rounded-3xl border-4 border-amber-800 p-8">
-        <div class="flex justify-between items-start mb-4">
-          <h3 class="text-2xl font-bold text-slate-900">Service Crew</h3>
-          <div class="text-right">
-            <p class="text-xl font-bold text-slate-900">All Brands</p>
-            <button class="text-amber-800 hover:text-amber-600 mt-2">
-              <span class="text-sm">Find out more</span>
-              <svg class="w-4 h-4 inline ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-              </svg>
-            </button>
-          </div>
-        </div>
-        <div class="w-full h-1 bg-amber-800 mb-6"></div>
-        <p class="text-slate-700">Be the face of The Proud Potato Heroes! You'll welcome guests, share stories about our food, and make sure every visit feels special.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Don't See Your Role Section -->
-<section class="py-20 px-6 md:px-12 lg:px-20">
-  <div class="max-w-6xl mx-auto">
-    <div class="grid md:grid-cols-2 gap-12 items-center">
-      <!-- Left Column -->
-      <div>
-        <h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-8 leading-tight">
-          Don't See Your Role?
-        </h2>
-      </div>
-      
-      <!-- Right Column -->
-      <div class="relative">
-        <!-- Vertical Line -->
-        <div class="absolute left-0 top-0 w-1 h-full bg-orange-400"></div>
-        <div class="pl-8 space-y-4">
-          <p class="text-lg text-slate-700 leading-relaxed">
-            We're always open to meeting new heroes!
-          </p>
-          <p class="text-lg text-slate-700 leading-relaxed">
-            If you think you'd be a great fit for our team, send us your details through our <a href="contact.html" class="text-amber-800 hover:text-amber-600 underline">contact form</a> — we'd love to hear from you!
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
+{% include career/hero.html %}
+{% include career/content.html %}
+{% include career/opening.html %}
+{% include career/footer.html %}
 </div>
+</body>
+</html>
