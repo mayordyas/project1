@@ -23,10 +23,10 @@
       <!-- FAQ Grid -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
         <!-- FAQ Item 1 -->
-        <div class="faq-item border-2 border-[#b9846a] rounded-2xl p-6 bg-gradient-to-br from-[#fce3d3] to-[#fad4bf] cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:shadow-xl" onclick="toggleFaq(this)">
+        <div class="faq-item border-2 border-[#7A4634] rounded-2xl p-6 bg-gradient-to-br from-[#fce3d3] to-[#fad4bf] cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:shadow-xl" onclick="toggleFaq(this)">
           <div class="flex justify-between items-start">
             <h3 class="font-bold text-lg pr-4 text-gray-900">Do I need a reservation?</h3>
-            <div class="faq-icon flex-shrink-0 w-6 h-6 rounded-full bg-white/50 flex items-center justify-center text-[#b9846a] font-bold transition-transform duration-300">
+            <div class="faq-icon flex-shrink-0 w-6 h-6 rounded-full bg-white/50 flex items-center justify-center text-[#7A4634] font-bold transition-transform duration-300">
               +
             </div>
           </div>
@@ -38,10 +38,10 @@
         </div>
 
         <!-- FAQ Item 2 -->
-        <div class="faq-item border-2 border-[#b9846a] rounded-2xl p-6 bg-gradient-to-br from-[#c5c9e3] to-[#b0b5d8] cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:shadow-xl" onclick="toggleFaq(this)">
+        <div class="faq-item border-2 border-[#7A4634] rounded-2xl p-6 bg-gradient-to-br from-[#c5c9e3] to-[#b0b5d8] cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:shadow-xl" onclick="toggleFaq(this)">
           <div class="flex justify-between items-start">
             <h3 class="font-bold text-lg pr-4 text-gray-900">Can I visit all three in one day?</h3>
-            <div class="faq-icon flex-shrink-0 w-6 h-6 rounded-full bg-white/50 flex items-center justify-center text-[#b9846a] font-bold transition-transform duration-300">
+            <div class="faq-icon flex-shrink-0 w-6 h-6 rounded-full bg-white/50 flex items-center justify-center text-[#7A4634] font-bold transition-transform duration-300">
               +
             </div>
           </div>
@@ -53,10 +53,10 @@
         </div>
 
         <!-- FAQ Item 3 -->
-        <div class="faq-item border-2 border-[#b9846a] rounded-2xl p-6 bg-gradient-to-br from-[#d4d4a0] to-[#c5c58f] cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:shadow-xl" onclick="toggleFaq(this)">
+        <div class="faq-item border-2 border-[#7A4634] rounded-2xl p-6 bg-gradient-to-br from-[#d4d4a0] to-[#c5c58f] cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:shadow-xl" onclick="toggleFaq(this)">
           <div class="flex justify-between items-start">
             <h3 class="font-bold text-lg pr-4 text-gray-900">Do you offer takeaway or delivery?</h3>
-            <div class="faq-icon flex-shrink-0 w-6 h-6 rounded-full bg-white/50 flex items-center justify-center text-[#b9846a] font-bold transition-transform duration-300">
+            <div class="faq-icon flex-shrink-0 w-6 h-6 rounded-full bg-white/50 flex items-center justify-center text-[#7A4634] font-bold transition-transform duration-300">
               +
             </div>
           </div>
@@ -68,10 +68,10 @@
         </div>
 
         <!-- FAQ Item 4 -->
-        <div class="faq-item border-2 border-[#b9846a] rounded-2xl p-6 bg-gradient-to-br from-[#d4a8a0] to-[#c9968e] cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:shadow-xl" onclick="toggleFaq(this)">
+        <div class="faq-item border-2 border-[#7A4634] rounded-2xl p-6 bg-gradient-to-br from-[#d4a8a0] to-[#c9968e] cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:shadow-xl" onclick="toggleFaq(this)">
           <div class="flex justify-between items-start">
             <h3 class="font-bold text-lg pr-4 text-gray-900">Are you family-friendly?</h3>
-            <div class="faq-icon flex-shrink-0 w-6 h-6 rounded-full bg-white/50 flex items-center justify-center text-[#b9846a] font-bold transition-transform duration-300">
+            <div class="faq-icon flex-shrink-0 w-6 h-6 rounded-full bg-white/50 flex items-center justify-center text-[#7A4634] font-bold transition-transform duration-300">
               +
             </div>
           </div>
@@ -86,7 +86,7 @@
       <!-- CTA -->
       <div class="text-center mt-12">
         <p class="text-gray-600 mb-4">Still have questions?</p>
-        <button class="bg-[#b9846a] hover:bg-[#a67559] text-white font-semibold px-8 py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+        <button class="inline-flex items-center justify-center border-2 border-[#7A4634] px-8 py-3 text-sm font-semibold text-[#2c1810] hover:opacity-80 transition-all" style="border-radius: 16px; background-image: url('assets/images/background.png'); background-size: cover; background-position: center;">
           Contact Us
         </button>
       </div>
@@ -97,21 +97,16 @@
     function toggleFaq(element) {
       const content = element.querySelector('.faq-content');
       const icon = element.querySelector('.faq-icon');
-      
-      // Check if this FAQ is currently open
       const isOpen = content.classList.contains('max-h-96');
       
-      // Close all FAQs
-      document.querySelectorAll('.faq-content').forEach(item => {
-        item.classList.remove('max-h-96');
-        item.classList.add('max-h-0');
+      document.querySelectorAll('.faq-item').forEach(item => {
+        const itemContent = item.querySelector('.faq-content');
+        const itemIcon = item.querySelector('.faq-icon');
+        itemContent.classList.remove('max-h-96');
+        itemContent.classList.add('max-h-0');
+        itemIcon.classList.remove('rotate-45');
       });
       
-      document.querySelectorAll('.faq-icon').forEach(item => {
-        item.classList.remove('rotate-45');
-      });
-      
-      // If this FAQ wasn't open, open it
       if (!isOpen) {
         content.classList.remove('max-h-0');
         content.classList.add('max-h-96');

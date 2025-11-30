@@ -7,7 +7,7 @@
         class="absolute inset-0 h-full w-full object-cover"
       />
       <div class="absolute inset-0 flex items-center justify-center px-4">
-        <div class="bg-[#fef5ec] rounded-3xl shadow-lg max-w-5xl w-full p-8 md:p-12">
+        <div class="shadow-lg max-w-11xl w-full px-10 py-16 md:px-16 md:py-20" style="border-radius: 16px; background-image: url('assets/images/background.png'); background-size: cover; background-position: center;">
           <div class="grid grid-cols-1 md:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)] gap-8 items-start">
             
             <!-- LEFT: TITLE -->
@@ -20,7 +20,10 @@
 
             <!-- RIGHT: CONTENT -->
             <div class="relative">
-              <div class="hidden md:block absolute left-[-32px] top-0 bottom-0 w-px bg-[#c9a08a]"></div>
+              <div class="hidden md:block absolute left-[-32px] top-0 bottom-0 w-px bg-[#7A4634]"
+                          style="border-left: 6px solid #7A4634;">
+
+              </div>
               
               <div class="space-y-4 text-sm leading-relaxed">
                 <p>
@@ -31,13 +34,15 @@
               <div class="mt-7 flex flex-wrap gap-4">
                 <a
                   href="#reservations"
-                  class="inline-flex items-center justify-center rounded-full border border-[#b9846a] px-6 py-2 text-xs font-semibold tracking-[0.18em] uppercase text-[#5c392c] hover:bg-[#b9846a] hover:text-[#fef5ec] transition-colors"
+                  class="inline-flex items-center justify-center border-2 border-[#7A4634] px-8 py-3 text-sm font-semibold text-[#2c1810] hover:bg-[#7A4634] hover:text-white transition-colors"
+                  style="border-radius: 16px;"
                 >
                   Make a Reservation
                 </a>
                 <a
                   href="#menu"
-                  class="inline-flex items-center justify-center rounded-full border border-transparent px-6 py-2 text-xs font-semibold tracking-[0.18em] uppercase text-[#5c392c] bg-[#f7e0c4] hover:bg-[#e5d4bc] transition-colors"
+                  class="inline-flex items-center justify-center border-2 border-[#7A4634] px-8 py-3 text-sm font-semibold text-[#2c1810] hover:bg-[#7A4634] hover:text-white transition-colors"
+                  style="border-radius: 16px;"
                 >
                   View Menu
                 </a>
