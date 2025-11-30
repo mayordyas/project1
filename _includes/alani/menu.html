@@ -1,5 +1,7 @@
-  <!-- MENU SECTION -->
-  <section class="relative py-14 bg-white">
+<!-- MENU & GALLERY SECTION -->
+<section class="relative">
+  <!-- Menu Part -->
+  <div class="relative py-14 pb-48 bg-white">
     <div class="mx-auto max-w-6xl px-4 lg:px-0">
       <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 italic">
         See <span class="font-serif">it.</span> Crave <span class="font-serif">it.</span> Taste <span class="font-serif">it.</span>
@@ -37,69 +39,46 @@
           </a>
         </div>
       </div>
-      <!-- Breads Section -->
-      <div class="mb-12">
-        <div class="flex items-center gap-4 mb-8">
-          <h3 class="text-3xl font-bold">Breads</h3>
-          <div class="h-1 w-16 bg-orange-600"></div>
-          <p class="text-sm flex-1">Fresh from the oven and baked with heart — our breads are golden-crusty on the outside, airy on the inside. Simple, honest, and always comforting.</p>
-        </div>
+    </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
-          <div class="text-center">
-            <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=400&q=80" alt="Rosemary Sea Salt Focaccia" class="w-full aspect-square object-cover rounded-3xl mb-4" />
-            <h4 class="font-semibold mb-1">Rosemary Sea Salt Focaccia</h4>
-            <p class="text-sm text-gray-600">$8</p>
-          </div>
-          <div class="text-center">
-            <img src="https://images.unsplash.com/photo-1549931319-a545dcf3bc73?w=400&q=80" alt="Country Sourdough" class="w-full aspect-square object-cover rounded-3xl mb-4" />
-            <h4 class="font-semibold mb-1">Country Sourdough</h4>
-            <p class="text-sm text-gray-600">$9</p>
-          </div>
-          <div class="text-center">
-            <img src="https://images.unsplash.com/photo-1517433670267-08bbd4be890f?w=400&q=80" alt="Artisan Bread" class="w-full aspect-square object-cover rounded-3xl mb-4" />
-            <h4 class="font-semibold mb-1">Artisan Bread</h4>
-            <p class="text-sm text-gray-600">$7</p>
-          </div>
-        </div>
+    <!-- Blue Shape Overlay -->
+    <div class="absolute bottom-0 left-0 right-0 z-20 pointer-events-none mt-32">
+      <img src="{{ '/assets/images/blue-shape-alani1.svg' | relative_url }}" alt="Blue Shape" class="w-full">
+    </div>
+  </div>
 
-        <div class="flex justify-end">
-          <a href="#order" class="inline-flex items-center justify-center rounded-full border-2 border-orange-600 px-6 py-2 text-sm font-semibold text-orange-800 hover:bg-orange-600 hover:text-white transition-colors">
-            Order Online
-          </a>
+  <!-- Gallery Part -->
+  <div class="relative bg-[#496BBB] py-6 overflow-visible">
+    <div class="container mx-auto px-4 relative z-10 mt-8">
+      <div class="grid grid-cols-4 gap-4">
+        <!-- Row 1 -->
+        <div class="aspect-[4/3] overflow-hidden rounded-lg">
+          <img src="{{ '/assets/images/2KY_1729.jpg' | relative_url }}" alt="Gallery 1" class="w-full h-full object-cover">
         </div>
-      </div>
-      <!-- Breads Section -->
-      <div class="mb-12">
-        <div class="flex items-center gap-4 mb-8">
-          <h3 class="text-3xl font-bold">Breads</h3>
-          <div class="h-1 w-16 bg-orange-600"></div>
-          <p class="text-sm flex-1">Fresh from the oven and baked with heart — our breads are golden-crusty on the outside, airy on the inside. Simple, honest, and always comforting.</p>
+        <div class="aspect-[4/3] overflow-hidden rounded-lg">
+          <img src="{{ '/assets/images/bar.jpg' | relative_url }}" alt="Gallery 2" class="w-full h-full object-cover">
         </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
-          <div class="text-center">
-            <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=400&q=80" alt="Rosemary Sea Salt Focaccia" class="w-full aspect-square object-cover rounded-3xl mb-4" />
-            <h4 class="font-semibold mb-1">Rosemary Sea Salt Focaccia</h4>
-            <p class="text-sm text-gray-600">$8</p>
-          </div>
-          <div class="text-center">
-            <img src="https://images.unsplash.com/photo-1549931319-a545dcf3bc73?w=400&q=80" alt="Country Sourdough" class="w-full aspect-square object-cover rounded-3xl mb-4" />
-            <h4 class="font-semibold mb-1">Country Sourdough</h4>
-            <p class="text-sm text-gray-600">$9</p>
-          </div>
-          <div class="text-center">
-            <img src="https://images.unsplash.com/photo-1517433670267-08bbd4be890f?w=400&q=80" alt="Artisan Bread" class="w-full aspect-square object-cover rounded-3xl mb-4" />
-            <h4 class="font-semibold mb-1">Artisan Bread</h4>
-            <p class="text-sm text-gray-600">$7</p>
-          </div>
+        <div class="aspect-[4/3] overflow-hidden rounded-lg">
+          <img src="{{ '/assets/images/2KY_1831.jpg' | relative_url }}" alt="Gallery 3" class="w-full h-full object-cover">
         </div>
-
-        <div class="flex justify-end">
-          <a href="#order" class="inline-flex items-center justify-center rounded-full border-2 border-orange-600 px-6 py-2 text-sm font-semibold text-orange-800 hover:bg-orange-600 hover:text-white transition-colors">
-            Order Online
-          </a>
+        <div class="aspect-[4/3] overflow-hidden rounded-lg">
+          <img src="{{ '/assets/images/blue-bar3.jpg' | relative_url }}" alt="Gallery 4" class="w-full h-full object-cover">
+        </div>
+        
+        <!-- Row 2 -->
+        <div class="aspect-[4/3] overflow-hidden rounded-lg">
+          <img src="{{ '/assets/images/bar.jpg' | relative_url }}" alt="Gallery 5" class="w-full h-full object-cover">
+        </div>
+        <div class="aspect-[4/3] overflow-hidden rounded-lg">
+          <img src="{{ '/assets/images/2KY_1874.jpg' | relative_url }}" alt="Gallery 6" class="w-full h-full object-cover">
+        </div>
+        <div class="aspect-[4/3] overflow-hidden rounded-lg">
+          <img src="{{ '/assets/images/bar.jpg' | relative_url }}" alt="Gallery 7" class="w-full h-full object-cover">
+        </div>
+        <div class="aspect-[4/3] overflow-hidden rounded-lg">
+          <img src="{{ '/assets/images/blue-bar3.jpg' | relative_url }}" alt="Gallery 8" class="w-full h-full object-cover">
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>

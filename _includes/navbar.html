@@ -15,34 +15,97 @@
       </button>
     </div>
     
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="overflow-hidden bg-white border-t border-gray-200 transition-all duration-300 ease-in-out max-h-0 opacity-0">
-      <div class="mx-auto max-w-6xl px-4 py-6">
-        <nav class="space-y-4">
-          <a href="#about" class="block text-lg text-gray-800 hover:text-[#b9846a] transition-colors duration-200">About</a>
-          <a href="#faqs" class="block text-lg text-gray-800 hover:text-[#b9846a] transition-colors duration-200">FAQs</a>
-          <a href="#bakery" class="block text-lg text-gray-800 hover:text-[#b9846a] transition-colors duration-200">Bakery</a>
-          <a href="#menu" class="block text-lg text-gray-800 hover:text-[#b9846a] transition-colors duration-200">Menu</a>
-          <a href="#reviews" class="block text-lg text-gray-800 hover:text-[#b9846a] transition-colors duration-200">Reviews</a>
-          <a href="#instagram" class="block text-lg text-gray-800 hover:text-[#b9846a] transition-colors duration-200">Instagram</a>
-        </nav>
-        <div class="mt-6 space-y-3">
-          <button class="w-full bg-[#b9846a] text-white py-3 px-6 rounded-lg font-medium hover:bg-[#a67659] transition-colors duration-200">Order Online</button>
-          <button class="w-full border border-[#b9846a] text-[#b9846a] py-3 px-6 rounded-lg font-medium hover:bg-[#b9846a] hover:text-white transition-all duration-200">Make Reservation</button>
+    <!-- Fullscreen Menu -->
+    <div id="mobile-menu" class="fixed inset-0 bg-[#f5e6d3] z-[9999] hidden transform -translate-y-full transition-transform duration-300">
+      <div class="h-full overflow-y-auto">
+        <div class="max-w-md mx-auto px-8 py-8">
+          <div class="flex justify-end mb-8">
+            <button id="menu-close" class="text-gray-800 hover:text-[#b9846a]">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+              </svg>
+            </button>
+          </div>
+          
+          <div class="mb-8">
+            {% if page.url contains 'alani' %}
+              <h2 class="text-2xl font-bold text-gray-800 mb-1">Alani</h2>
+            {% elsif page.url contains 'proud-potato-peeler' %}
+              <h2 class="text-2xl font-bold text-gray-800 mb-1">Proud Potato Peeler</h2>
+            {% else %}
+              <h2 class="text-2xl font-bold text-gray-800 mb-1">Menu</h2>
+            {% endif %}
+          </div>
+          
+          <nav class="space-y-4 mb-8">
+            <a href="#about" class="block text-base text-gray-800 hover:text-[#b9846a]">About</a>
+            <a href="#faqs" class="block text-base text-gray-800 hover:text-[#b9846a]">FAQs</a>
+            <a href="#bakery" class="block text-base text-gray-800 hover:text-[#b9846a]">Bakery</a>
+            <a href="#menu" class="block text-base text-gray-800 hover:text-[#b9846a]">Menu</a>
+            <a href="#reviews" class="block text-base text-gray-800 hover:text-[#b9846a]">Reviews</a>
+            <a href="#instagram" class="block text-base text-gray-800 hover:text-[#b9846a]">Instagram</a>
+          </nav>
+          
+          <div class="space-y-3 mb-12">
+            <button class="w-full border-2 border-orange-500 text-gray-800 py-3 px-6 rounded-full font-semibold hover:bg-orange-500 hover:text-white transition-all">Order Online</button>
+            <button class="w-full border-2 border-blue-500 text-gray-800 py-3 px-6 rounded-full font-semibold hover:bg-blue-500 hover:text-white transition-all">Make Reservation</button>
+          </div>
+          
+          {% if page.url contains 'alani' %}
+          <div class="space-y-4 mb-12">
+            <a href="proud-potato-peeler.html" class="flex items-center justify-between text-gray-800 text-xl font-bold hover:text-[#b9846a]">
+              <span>Proud Potato Peeler</span>
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </a>
+            <a href="proud-perfect-potions.html" class="flex items-center justify-between text-gray-800 text-xl font-bold hover:text-[#b9846a]">
+              <span>Proud Perfect Potions</span>
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+          {% elsif page.url contains 'proud-potato-peeler' %}
+          <div class="space-y-4 mb-12">
+            <a href="alani.html" class="flex items-center justify-between text-gray-800 text-xl font-bold hover:text-[#b9846a]">
+              <span>Alani</span>
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </a>
+            <a href="proud-perfect-potions.html" class="flex items-center justify-between text-gray-800 text-xl font-bold hover:text-[#b9846a]">
+              <span>Proud Perfect Potions</span>
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+          {% endif %}
+          
+          <div class="flex justify-around">
+            <a href="career.html" class="text-gray-800 text-xl font-bold hover:text-[#b9846a]">Career</a>
+            <a href="contact.html" class="text-gray-800 text-xl font-bold hover:text-[#b9846a]">Contact</a>
+          </div>
         </div>
       </div>
     </div>
   </header>
   
   <script>
-    document.getElementById('menu-toggle').addEventListener('click', function() {
-      const menu = document.getElementById('mobile-menu');
-      if (menu.style.maxHeight === '500px') {
-        menu.style.maxHeight = '0';
-        menu.style.opacity = '0';
-      } else {
-        menu.style.maxHeight = '500px';
-        menu.style.opacity = '1';
-      }
+    const menuToggle = document.getElementById('menu-toggle');
+    const menuClose = document.getElementById('menu-close');
+    const menu = document.getElementById('mobile-menu');
+    
+    menuToggle.addEventListener('click', function() {
+      menu.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+      setTimeout(() => menu.classList.remove('-translate-y-full'), 10);
+    });
+    
+    menuClose.addEventListener('click', function() {
+      menu.classList.add('-translate-y-full');
+      document.body.style.overflow = '';
+      setTimeout(() => menu.classList.add('hidden'), 300);
     });
   </script>
