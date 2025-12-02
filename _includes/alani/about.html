@@ -1,42 +1,72 @@
 <!-- ABOUT SECTION -->
-<section class="relative py-20 bg-orange-50 overflow-visible">
-  <div class="mx-auto max-w-6xl px-4 lg:px-0 relative z-10">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-start mb-12">
-      
-      <!-- LEFT: TITLE -->
-      <div>
-        <h2 class="text-3xl md:text-4xl font-bold leading-tight text-gray-900">
-          ALANI, a Greek word of Turkish origin, refers to a free-spirited boy roaming the streets, much like a vagabond or rolling stone.
-        </h2>
-      </div>
-
-      <!-- RIGHT: CONTENT -->
-      <div class="relative">
-        <div class="hidden md:block absolute -left-8 top-0 h-32 w-1 bg-red-600"></div>
-        
-        <div class="text-sm leading-relaxed mb-8 text-gray-700">
-          <p>
-            This essence of movement and cultural exchange inspires the brand, which celebrates dough as a universal connector between traditions. Rooted in the founder's Greek and Turkish heritage, and shaped by a lifetime of global travel, Alani brings together dough recipes from around the world with creativity and a nod to tradition, the brand crafts playful, unexpected versions of classic baked goods, blending flavors and ideas collected along the journey.
-          </p>
+<section class="relative pt-36 pb-60 bg-[#FBF9ED] overflow-x-hidden overflow-y-visible">
+    <div class="mx-auto max-w-6xl px-4 lg:px-0 relative z-10">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-start mb-2">
+        <!-- LEFT: TITLE -->
+        <div data-aos="fade-right" data-aos-offset="200">
+          <h2 class="text-3xl md:text-4xl my-8 ms-8 font-semibold leading-tight text-gray-900">
+            ALANI, a Greek word of Turkish origin, refers to a free-spirited boy roaming the streets, much like a vagabond or rolling stone.
+          </h2>
         </div>
-
-        <div class="flex flex-wrap gap-4">
-          <a href="#reservations" class="inline-flex items-center justify-center rounded-full border-2 border-blue-500 bg-white px-8 py-3 text-sm font-medium text-blue-500 hover:bg-blue-500 hover:text-white transition-colors">
-            Make a Reservation
-          </a>
-          <a href="#menu" class="inline-flex items-center justify-center rounded-full border-2 border-red-500 bg-white px-8 py-3 text-sm font-medium text-red-500 hover:bg-red-500 hover:text-white transition-colors">
-            Order Online
-          </a>
-        </div>
-      </div>
-    </div>
-    <br>
-    <br>
-    <br>
-  </div>
   
-  <!-- Wave Shape -->
-  <div class="absolute bottom-0 left-0 w-full">
-    <img src="{{ '/assets/images/red-shape-alani1.svg' | relative_url }}" alt="" class="w-full block">
-  </div>
-</section>
+        <!-- RIGHT: CONTENT -->
+        <div class="relative" data-aos="fade-left" data-aos-offset="200" data-aos-delay="150">
+          <div class="hidden md:block absolute -left-8 top-0 h-full w-1 bg-[#BA3914]"></div>
+          <div class="text-md leading-relaxed m-8 text-gray-700">
+            <p>
+              This essence of movement and cultural exchange inspires the brand, which celebrates dough as a universal connector between traditions. Rooted in the founder's Greek and Turkish heritage, and shaped by a lifetime of global travel, Alani brings together dough recipes from around the world with creativity and a nod to tradition, the brand crafts playful, unexpected versions of classic baked goods, blending flavors and ideas collected along the journey.
+            </p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- BUTTONS -->
+      <div
+        class="flex flex-wrap gap-4 justify-end"
+        data-aos="fade-up"
+        data-aos-offset="200"
+        data-aos-delay="250"
+      >
+        <a
+          href="#reservations"
+          class="bg-[#FBF9ED] inline-flex items-center justify-center rounded-lg border-2 border-blue-500 px-8 py-3 text-sm font-semibold text-black hover:bg-blue-500 hover:text-white transition-colors"
+        >
+          Make a Reservation
+        </a>
+        <a
+          href="#menu"
+          class="bg-[#FBF9ED] inline-flex items-center justify-center rounded-lg border-2 border-red-500 px-8 py-3 text-sm font-semibold text-black hover:bg-red-500 hover:text-white transition-colors"
+        >
+          Order Online
+        </a>
+      </div>
+  
+      <br><br><br>
+    </div>
+  
+    <!-- BLUE SHAPE (kiri bawah) -->
+    <img
+      src="{{ '/assets/images/blob-blue.svg' | relative_url }}"
+      alt=""
+      class="pointer-events-none absolute -left-4 bottom-[140px] w-[220px] md:w-[260px] z-[1]"
+      data-aos="zoom-in-up"
+      data-aos-offset="200"
+      data-aos-delay="200"
+    />
+  
+    <!-- YELLOW SHAPE (kanan atas) -->
+    <img
+      src="{{ '/assets/images/blob-yellow.svg' | relative_url }}"
+      alt=""
+      class="pointer-events-none absolute -right-2 top-8 w-[230px] md:w-[260px] z-1"
+      data-aos="zoom-in-down"
+      data-aos-offset="200"
+      data-aos-delay="100"
+    />
+  
+    <!-- Wave Shape (tanpa animasi, biar stabil) -->
+    <div class="absolute bottom-0 left-0 w-full">
+      <img src="{{ '/assets/images/red-shape-alani1.svg' | relative_url }}" alt="" class="w-full block">
+    </div>
+  </section>
+  

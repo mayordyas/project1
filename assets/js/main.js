@@ -1,6 +1,6 @@
 // ================= LOADER =================
 
-const LOADER_DURATION = 3500; // 3.5 detik
+const LOADER_DURATION = 3500;
 
 window.addEventListener("load", () => {
   const loader = document.getElementById("loader");

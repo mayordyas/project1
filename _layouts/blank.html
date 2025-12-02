@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>
+      {% if page.title %}{{ page.title | escape }} · {% endif %}
+      {{ site.title | default: "The Potato Heroes" | escape }}
+    </title>
+
+    {% include head.html %}
+  </head>
+
+  <body class="site-body" data-theme="light">
+    <main id="main-content" class="site-main">
+      {{ content }}
+    </main>
+
+    <script defer src="{{ '/assets/js/main.js' | relative_url }}"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        once: true,          
+        duration: 900,       
+        easing: 'ease-out',  
+      });
+    </script>
+  </body>
+</html>

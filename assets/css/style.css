@@ -1,6 +1,6 @@
 
 :root {
-  --potato-bg: #fbf9ed;
+  --potato-bg: #FBF9ED;
   --potato-brown: #7b3a26;
   --loader-width: min(420px, 60vw);
   --panel-flex-duration: 0.75s;
@@ -17,8 +17,8 @@ body {
 }
 
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
-    sans-serif;
+  font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont,
+  "SF Pro Text", "Segoe UI", sans-serif;
   background-color: var(--potato-bg);
 }
 
@@ -213,7 +213,7 @@ body.is-loaded #hero-screen {
 .brand-panel__scrim-bottom {
   bottom: 0;
   height: 55%;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.65), transparent);
 }
 
 .brand-panel__content {
@@ -239,6 +239,7 @@ body.is-loaded #hero-screen {
   justify-content: space-between;
   align-items: flex-start;
   font-size: 10px;
+  font-weight: bold;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   opacity: 0.8;

@@ -4,16 +4,16 @@ title: Home
 ---
 
 <script src="https://cdn.tailwindcss.com"></script>
-<div class="min-h-screen bg-orange-100 text-slate-900 overflow-x-hidden">
 {% include navbar.html %}
+<div class="min-h-screen bg-orange-100 text-slate-900 overflow-x-hidden">
 {% include alani/hero.html %}
-{% include alani/about.html %}
-{% include alani/gallery.html %}
+<div id="about">{% include alani/about.html %}</div>
+<div id="bakery">{% include alani/gallery.html %}</div>
 {% include alani/cta.html %}
-{% include alani/menu.html %}
-{% include alani/menu2.html %}
-{% include alani/testimoni.html %}
-{% include alani/faq.html %}
+<div id="menu">{% include alani/menu.html %}
+{% include alani/menu2.html %}</div>
+<div id="reviews">{% include alani/testimoni.html %}</div>
+<div id="faqs">{% include alani/faq.html %}</div>
 {% include alani/cta-2.html %}
-{% include alani/map.html %}
+<div id="instagram">{% include alani/map.html %}</div>
 </div>
