@@ -41,9 +41,9 @@
 <section class="relative pt-32 pb-14" style="background-color: #F0C241;">
   <div class="mx-auto max-w-6xl px-4 lg:px-0 space-y-6">
     <!-- ROW 1 SLIDER -->
-    <div class="relative" id="gallery-row1">
+    <div class="relative" id="testimoni-gallery-row1">
       <div class="overflow-hidden rounded-2xl">
-        <div id="gallery-row1-track" class="flex transition-transform duration-500 ease-out will-change-transform">
+        <div id="testimoni-gallery-row1-track" class="flex transition-transform duration-500 ease-out will-change-transform">
           <!-- SLIDE 1 ROW 1 -->
           <div class="min-w-full grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
             <img src="assets/images/2KY_2172.jpg" alt="Counter" class="aspect-[4/3] w-full object-cover rounded-xl cursor-pointer" data-lightbox="gallery" loading="lazy">
@@ -63,13 +63,13 @@
       </div>
 
       <!-- ARROW ROW 1 -->
-      <button id="gallery-row1-prev" aria-label="Previous row 1" class="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white rounded-full p-3 shadow-lg transition-all">
+      <button id="testimoni-gallery-row1-prev" aria-label="Previous row 1" class="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white rounded-full p-3 shadow-lg transition-all">
         <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
           <path d="M15 19L8 12L15 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
       </button>
 
-      <button id="gallery-row1-next" aria-label="Next row 1" class="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white rounded-full p-3 shadow-lg transition-all">
+      <button id="testimoni-gallery-row1-next" aria-label="Next row 1" class="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white rounded-full p-3 shadow-lg transition-all">
         <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
           <path d="M9 5L16 12L9 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
@@ -77,9 +77,9 @@
     </div>
 
     <!-- ROW 2 SLIDER -->
-    <div class="relative" id="gallery-row2">
+    <div class="relative" id="testimoni-gallery-row2">
       <div class="overflow-hidden rounded-2xl">
-        <div id="gallery-row2-track" class="flex transition-transform duration-500 ease-out will-change-transform">
+        <div id="testimoni-gallery-row2-track" class="flex transition-transform duration-500 ease-out will-change-transform">
           <!-- SLIDE 1 ROW 2 -->
           <div class="min-w-full grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
             <img src="assets/images/2KY_1831.jpg" alt="Counter" class="aspect-[4/3] w-full object-cover rounded-xl cursor-pointer" data-lightbox="gallery" loading="lazy">
@@ -99,13 +99,13 @@
       </div>
 
       <!-- ARROW ROW 2 -->
-      <button id="gallery-row2-prev" aria-label="Previous row 2" class="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white rounded-full p-3 shadow-lg transition-all">
+      <button id="testimoni-gallery-row2-prev" aria-label="Previous row 2" class="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white rounded-full p-3 shadow-lg transition-all">
         <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
           <path d="M15 19L8 12L15 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
       </button>
 
-      <button id="gallery-row2-next" aria-label="Next row 2" class="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white rounded-full p-3 shadow-lg transition-all">
+      <button id="testimoni-gallery-row2-next" aria-label="Next row 2" class="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white rounded-full p-3 shadow-lg transition-all">
         <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
           <path d="M9 5L16 12L9 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
@@ -115,10 +115,10 @@
 </section>
 
 <!-- LIGHTBOX POPUP -->
-<div id="lightbox" class="fixed inset-0 z-[9999] hidden items-center justify-center bg-black/70 px-4">
+<div id="testimoni-lightbox" class="fixed inset-0 z-[9999] hidden items-center justify-center bg-black/70 px-4">
   <div class="relative mx-auto flex w-full max-w-5xl items-center justify-center">
-    <button id="lightbox-close" class="absolute -top-10 right-0 text-white/80 hover:text-white text-3xl" aria-label="Close">×</button>
-    <img id="lightbox-image" src="" alt="" class="max-h-[80vh] max-w-full rounded-2xl shadow-2xl object-contain bg-black/20">
+    <button id="testimoni-lightbox-close" class="absolute -top-10 right-0 text-white/80 hover:text-white text-3xl" aria-label="Close">×</button>
+    <img id="testimoni-lightbox-image" src="" alt="" class="max-h-[80vh] max-w-full rounded-2xl shadow-2xl object-contain bg-black/20">
   </div>
 </div>
 
@@ -193,13 +193,13 @@
     }
 
     // Initialize sliders
-    setupRowSlider('gallery-row1-track', 'gallery-row1-prev', 'gallery-row1-next', 5000);
-    setupRowSlider('gallery-row2-track', 'gallery-row2-prev', 'gallery-row2-next', 6000);
+    setupRowSlider('testimoni-gallery-row1-track', 'testimoni-gallery-row1-prev', 'testimoni-gallery-row1-next', 5000);
+    setupRowSlider('testimoni-gallery-row2-track', 'testimoni-gallery-row2-prev', 'testimoni-gallery-row2-next', 6000);
 
     // Optimized Lightbox
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightbox-image');
-    const lightboxClose = document.getElementById('lightbox-close');
+    const lightbox = document.getElementById('testimoni-lightbox');
+    const lightboxImg = document.getElementById('testimoni-lightbox-image');
+    const lightboxClose = document.getElementById('testimoni-lightbox-close');
 
     if (!lightbox || !lightboxImg || !lightboxClose) return;
 
